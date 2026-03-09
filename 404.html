@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script>
-      window.location.href = '/miniPos_G11/' + window.location.pathname.split('/miniPos_G11/')[1];
-    </script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <script>
+    window.location.replace(
+      'https://ckprtt.github.io/miniPos_G11/' +
+      window.location.pathname.slice(1) +
+      window.location.search +
+      window.location.hash
+    );
+  </script>
+</head>
 </html>
