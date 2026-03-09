@@ -2,14 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>miniPOS</title>
     <script>
-      // Redirect to index.html with path as query param
-      var path = window.location.pathname.replace('/miniPos_G11', '');
-      window.location.replace(
-        '/miniPos_G11/?p=' + encodeURIComponent(path)
-      );
+      window.location.href = '/miniPos_G11/' + window.location.pathname.split('/miniPos_G11/')[1];
     </script>
   </head>
-  <body></body>
 </html>
