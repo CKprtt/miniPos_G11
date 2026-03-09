@@ -1,0 +1,7 @@
+{
+  "name": "mini-pos-react",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
