@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">mini-pos-react</string>
-    <string name="title_activity_main">mini-pos-react</string>
-    <string name="package_name">cpkku.minipos.project</string>
-    <string name="custom_url_scheme">cpkku.minipos.project</string>
-</resources>
