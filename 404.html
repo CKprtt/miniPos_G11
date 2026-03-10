@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <script>
-    window.location.replace(
-      'https://ckprtt.github.io/miniPos_G11/' +
-      window.location.pathname.slice(1) +
-      window.location.search +
-      window.location.hash
-    );
-  </script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>miniPOS</title>
+    <script>
+      // Redirect to index.html with path as query param
+      var path = window.location.pathname.replace('/miniPos_G11', '');
+      window.location.replace(
+        '/miniPos_G11/?p=' + encodeURIComponent(path)
+      );
+    </script>
+  </head>
+  <body></body>
 </html>
