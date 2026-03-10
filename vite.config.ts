@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/miniPos_G11/",
+  base: "./",
   plugins: [react(), legacy()],
   test: {
     globals: true,
