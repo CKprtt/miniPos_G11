@@ -174,7 +174,7 @@ export default function Home() {
             id: docSnap.id,
             createdAt: data.createdAt,
             total: Number(data.total || 0),
-            items: Array.isArray(data.items) ? data.items : []
+            items: Array.isArray(data.items) && data.items.length > 0 ? data.items : Array.isArray(data.cart) ? data.cart : []
           };
         });
 
