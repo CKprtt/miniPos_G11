@@ -68,7 +68,7 @@ const BASE_URL =
     ? "http://192.168.0.106:5173"
     : window.location.origin;
 
-const receiptUrl = `${BASE_URL}/receipt/${orderId}`;
+const receiptUrl = `https://ckprtt.github.io/miniPos_G11/#/receipt/${orderId}`;
 
   return {
     merchantName: String(parsed.merchantName || "MiniPOS Demo Shop"),
