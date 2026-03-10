@@ -37,11 +37,14 @@ export default function SalesHistory() {
       const snapshot = await getDocs(q);
       const list: SaleRecord[] = snapshot.docs.map((docSnap) => {
         const d = docSnap.data();
+        // ✅ รองรับทั้ง field "items" และ "cart"
+        const items = Array.isArray(d.items) && d.items.length > 0 ? d.items
+          : Array.isArray(d.cart) ? d.cart : [];
         return {
           id: docSnap.id, createdAt: d.createdAt,
           subtotal: Number(d.subtotal || 0), vat: Number(d.vat || 0), total: Number(d.total || 0),
           paymentMethod: d.paymentMethod || "", orderType: d.orderType || "",
-          items: Array.isArray(d.items) ? d.items : [],
+          items,
         };
       });
       list.sort((a, b) => {
@@ -58,7 +61,6 @@ export default function SalesHistory() {
     }
   };
 
-  // ✅ เพิ่ม useEffect
   useEffect(() => { loadSales(); }, []);
   useIonViewWillEnter(() => { loadSales(); });
 
