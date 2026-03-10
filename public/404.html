@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>miniPOS</title>
+    <script>
+      var path = window.location.pathname;
+      var repoBase = "/miniPos_G11";
+      var newUrl = repoBase + "/#" + path.replace(repoBase, "");
+
+      if (window.location.search) {
+        newUrl += window.location.search;
+      }
+      if (window.location.hash) {
+        newUrl += window.location.hash;
+      }
+
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body></body>
+</html>
