@@ -5,7 +5,7 @@ import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZvaa6AlpRLcfvFbq1iT7gjYPw20aFwOM",
-  authDomain: "ckprtt.github.io",
+  authDomain: "minipos2026.firebaseapp.com",
   projectId: "minipos2026",
   
   storageBucket: "minipos2026.firebasestorage.app",
