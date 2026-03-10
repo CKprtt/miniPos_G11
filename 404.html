@@ -1,14 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>miniPOS</title>
     <script>
-      // Redirect to index.html with path as query param
-      var path = window.location.pathname.replace('/miniPos_G11', '');
-      window.location.replace(
-        '/miniPos_G11/?p=' + encodeURIComponent(path)
-      );
+      var path = window.location.pathname;
+      var repoBase = "/miniPos_G11";
+      var newUrl = repoBase + "/#" + path.replace(repoBase, "");
+
+      if (window.location.search) {
+        newUrl += window.location.search;
+      }
+      if (window.location.hash) {
+        newUrl += window.location.hash;
+      }
+
+      window.location.replace(newUrl);
     </script>
   </head>
   <body></body>
